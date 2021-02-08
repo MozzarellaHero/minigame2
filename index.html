@@ -11,7 +11,8 @@
 				border:solid 1px #888;
 			}
 </style>
-→と←の方向キーで操作
+→と←の方向キーで操作<br>
+残念！やり直し！はEnterキーでも進めます。
 <h2>ミニゲームすしくずし＜二皿目＞<br>さすぺんす
 ！！</h2>
 
@@ -35,7 +36,7 @@ const ball={
 				y: null,
 				width: 5,
 				height: 5,
-				speed: 3,
+				speed: 5,
 				dx: null,
 				dy: null,
 
@@ -99,7 +100,12 @@ const block={
 
 const level=[
 
-[0,0,1,1,0,0],
+[1,1,1,1,1,1],
+[1,1,1,1,1,1],
+[1,1,1,1,1,1],
+[1,1,1,1,1,1],
+[1,1,1,1,1,1],
+[0,0,0,0,0,0],
 ]
 
 const init=()=>{
@@ -162,7 +168,7 @@ const loop = () => {
 			ball.dy *= -1;
 			block.data.splice(index,1);
 			if(block.data.length===0){
-				alert('おめでとう！その調子で三皿目も食べちゃおう！')
+				alert('おめでとう！最終皿へレッツゴー！')
 			window.open('https://mozzarellahero.github.io/minigame3/', '_blank');
 		}
 
